@@ -1,0 +1,199 @@
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 64px 80px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  margin-bottom: 32px;
+}
+
+.breadcrumb a {
+  color: var(--color-text-muted);
+  transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-text);
+}
+
+.breadcrumb span {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+/* Top section: gallery + info */
+.topSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.name {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.star {
+  color: var(--color-yellow);
+}
+
+.reviews {
+  color: var(--color-text-muted);
+  text-decoration: underline;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.price {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.description {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  padding: 20px;
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+}
+
+/* Vehicle details */
+.detailsSection {
+  margin-bottom: 48px;
+}
+
+.sectionTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.featureTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.featureTag {
+  padding: 8px 18px;
+  background: var(--color-tag-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.specTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.specTable tr {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.specTable tr:last-child {
+  border-bottom: none;
+}
+
+.specTable td {
+  padding: 14px 0;
+  font-size: 15px;
+}
+
+.specTable td:first-child {
+  color: var(--color-text-muted);
+}
+
+.specTable td:last-child {
+  text-align: right;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* Bottom section: reviews + booking form */
+.bottomSection {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.reviewsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Loading / Error states */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  font-size: 18px;
+  color: var(--color-text-muted);
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  font-size: 18px;
+  color: #e53e3e;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-right: 12px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
